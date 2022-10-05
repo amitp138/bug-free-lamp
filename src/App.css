@@ -1,38 +1,94 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+      }
+
+* {
+  box-sizing: border-box;
+}
+label{
+  color: antiquewhite;
+  width: 100vw;
+margin-top: 2vh;
+
+}
+h1{
+  color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
 .App {
+  
   text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
+}
+
+.App::before{
+  background: linear-gradient(#473A87 20%,#476092 30%, #4C8BA3 50%) ;
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 110%;
+  z-index: -1;
+ 
+}
+
+.inp{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+input[type=text],.newsel {
+  width: 40vw;
+  padding: 12px;
+  border: 1px solid #ccc;
+  width: 100vw;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 20px;
+}
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+.row{
+  margin-left: 50vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 100vh;
+}
+.submit{
+  display: flex;
+  justify-content: center;
+}
+.sub{
+  background-color: #04AA6D;
   color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  border-radius: 20px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
   }
 }
